@@ -1,3 +1,3 @@
-var string = "this is a string"
+var string = "this is a string";
 
-window.alert(string)
+window.alert(string);
