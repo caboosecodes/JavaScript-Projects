@@ -37,13 +37,15 @@ noConsole();
 // Dategethours method assignment
 
 function hello() {
-    if (new Date().getHours() > 18) { //conditional statement; if the statement is true then "hello, how are you?" will be displayed to the element class "hours"
+    if (new Date().getHours() < 18) { //conditional statement; if the statement is true then "hello, how are you?" will be displayed to the element class "hours"
     document.getElementById("hours").innerHTML = "Hello, how are you?";
     }
 }
 
 //my own if statement
 
-function Hours() {
-    if
+function valentinesDay() {
+    if (new Date().getMonth() > 2) {
+        document.getElementById("valentines").innerHTML = "Valentines day has passed";
+    }
 }
