@@ -25,3 +25,13 @@ function myFunction()   {
     + Chad.computer_cpu + " cpu, " + Chad.computer_gpu + " gpu, and a " + 
     Chad.computer_mobo + " motherboard.";
 }
+
+function myFunction()   {
+    document.getElementById("nested_function").innerHTML = decrement();
+    function decrement() {
+        var start = 11
+        function down() {start -= 1;}
+        down();
+        return start;
+    }
+}
