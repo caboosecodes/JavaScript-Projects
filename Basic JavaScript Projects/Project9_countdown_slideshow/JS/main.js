@@ -33,7 +33,7 @@ function showSlides(n) {
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slideIndex; i++) { //for statement; it loops through the block of code; if i is greaters than slide index then increment i
+    for (i = 0; i < slides.length; i++) { //for statement; it loops through the block of code; if i is greaters than slide index then increment i
         slides[i].style.display = "none"; //[] mean index of an array, so [2] is the INDEX position of 2
     }
     for (i = 0; i < dots.length; i++) {
