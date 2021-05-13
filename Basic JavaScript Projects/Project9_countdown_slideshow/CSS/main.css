@@ -2,12 +2,22 @@
     box-sizing: border-box; /*width, height, content padding and border */
 }
 
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    vertical-align: center;
+    width: 100%;
+}
+
 /* slideshow container*/
 .slideshow-container {
-    max-width: 100%;
+    max-width: 1000px;
     position: relative;
     margin: auto;
 }
+
 
 /* hides images by default */
 .mySlides {
