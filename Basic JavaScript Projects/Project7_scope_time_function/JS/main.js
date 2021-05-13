@@ -49,3 +49,33 @@ function valentinesDay() {
         document.getElementById("valentines").innerHTML = "Valentines day has passed";
     }
 }
+
+// Else Statment
+
+function legalAge() {
+    age = document.getElementById("drinkingAge").value; // the age entered by user
+    if (age >= 21) {
+        drink = "You are old enough to purchase an alcoholic beverage" //if true then this message displays to user
+    }
+    else {
+        drink = "You are not old enough to purchase an alcohlic beverage"   //if false thne this message display to user
+    }
+    document.getElementById("legal").innerHTML = drink; //
+}
+
+// Else If Statement
+
+function Time_fuction() {
+    var time = new Date().getHours();
+    var reply;
+    if (time < 12 == time > 0) { 
+        reply = "Good Morning"; 
+    }
+    else if (time >= 12 == time < 18) {
+        reply = "Good afternoon";
+    }
+    else {
+        reply = "Good Night";
+    }
+    document.getElementById("Time_of_Day").innerHTML = reply;
+}
