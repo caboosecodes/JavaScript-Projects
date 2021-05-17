@@ -40,11 +40,11 @@ function placeXOrO(squareNumber) {
         //this functions plays the placement sound
         audio("./media/place_blop.mp3");
         //this condition checks to se if it is the computers turn
-        if(activePlayer === 0) {
+        if(activePlayer === "O") {
             //this functions disables click for computer choice
             disableClick();
             //this function waits 1 second before computer places the image and enables the click
-            setTimeout(function () { computersTurn(); }, 1000)
+            setTimeout(function () { computersTurn(); }, 1000);
         }
         //returning true is needed for our computerTurn() function to work
         return true;
@@ -58,7 +58,7 @@ function placeXOrO(squareNumber) {
         //this condition allows our while loop to keep trying if a sqaure is selected already
         while(!success) {
             //a random number between 0 and 8 is selected
-            pickSquare = String(Math.floor(math.random() * 9));
+            pickASquare = String(Math.floor(Math.random() * 9));
             //if the random number evaluated returns true, the square hasn't been selected yet
             if (placeXOrO(pickASquare)) {
                 //this class the function
