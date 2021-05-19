@@ -1,7 +1,7 @@
 function getReceipt() {
     //initializes the string so it can get passed from function to function
     //growing line by line into a full receipt
-    var text1 = <h3>You Ordered:</h3>
+    var text1 = "<h3>You Ordered:</h3>";
     var runningTotal = 0;
     var sizeTotal = 0;
     var sizeArray = document.getElementsByClassName("size"); //".getElementsByClassName()" returns a collection of of the specified class
@@ -36,7 +36,7 @@ function getTopping(runningTotal, text1) {
     var toppingTotal = 0;
     var selectedTopping = [];
     var toppingArray = document.getElementsByClassName("toppings");
-    for (var j = 0; i < toppingArray.length; j++) {
+    for (var j = 0; j < toppingArray.length; j++) {
         if (toppingArray[j].checked) {
             selectedTopping.push(toppingArray[j].value);
             console.log("selected topping item: (" + toppingArray[j].value+ ")");
