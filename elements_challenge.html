@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>elements challenge</title>
+    </head>
+    <body>
+        <h1>Elements challenge</h1>
+        <p>the HTML DOM addEventlistener() method will out put "Hello, how are you?" when you click anywhere on the document</p>
+        <p id="greeting"></p>
+
+        <script>
+            document.addEventListener("click", function(){
+                document.getElementById("greeting").innerHTML = "Hello, how are you?";
+            });
+        </script>
+
+
+
+
+    </body>
+</html>
