@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    //$ is the same as typing jQuery
+    //targeted the DOM such as the "body" element
+$(document).ready(function() {
+    $("html").append(
+        "<body>\
+            <div id='container>\
+                <div id='inner'>\
+                    <h1 >Basic jQuery</h1>\
+                        <p id='1'>Mouse placement</p>\
+                        <p id='place'></p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Click here to hide the heading element</p>\
+                        <p id='show'>Click here to show the heading element</p>\
+                </div>\
+            </div>\
+        </body>"
+    );
+    //targets the p tag, goes to the css property of it and changes the text to red
+    //use # to target id 
+    $("#2").css({"color":"red"});
+    // targeting the element with id "3"
+    $("#3").click(function() {
+        //hides the h1 element when the element with the id of "3" is clicked
+        $("h1").hide();
+    });
+    //event is the parameter
+    $(document).on("mousemove", function(event) {
+        $("#place").text("pageX: " + event.pageX + ", pageY: " + event.pageY);
+    });
+    $("#show").click(function() {
+        $("h1").show();
+    });
+});
+
+
+</script>
+</html>
