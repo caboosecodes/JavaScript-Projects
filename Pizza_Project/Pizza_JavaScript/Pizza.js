@@ -24,8 +24,9 @@ function getReceipt() {
     }else if (selectedSize === "Extra Large Pizza") {
         sizeTotal = 16;
     }
+    //shown in the console
     runningTotal = sizeTotal;
-    console.log(selectedSize + " = $" + sizeTotal + ".00");
+    console.log(selectedSize + " = $" + sizeTotal + ".00"); //sets the price for the pizzas
     console.log("size text1" + text1);
     console.log("subtotal: $" + runningTotal+".00");
     //these variables will get passed on to each function
@@ -37,15 +38,15 @@ function getTopping(runningTotal, text1) {
     var selectedTopping = [];
     var toppingArray = document.getElementsByClassName("toppings");
     for (var j = 0; j < toppingArray.length; j++) {
-        if (toppingArray[j].checked) {
-            selectedTopping.push(toppingArray[j].value);
-            console.log("selected topping item: (" + toppingArray[j].value+ ")");
+        if (toppingArray[j].checked) { //".checked" is a key
+            selectedTopping.push(toppingArray[j].value); //".push" adds elements to the end of an array
+            console.log("selected topping item: (" + toppingArray[j].value+ ")"); //shown in the console
             text1 = text1 + toppingArray[j].value + "<br>";
         }
     }
-    var toppingCount = selectedTopping.length;
+    var toppingCount = selectedTopping.length; 
     if (toppingCount > 1) {
-        toppingTotal = (toppingCount - 1);
+        toppingTotal = (toppingCount - 1); //-1 free topping
     } else {
         toppingTotal = 0;
     }
