@@ -2,12 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Basic HTML Template</title>
+        <title>Fade out</title>
+        <style>
+            body {
+                opacity: 1;
+                transition: 10s opacity;
+            }
+            
+            body.fade-out {
+                opacity: 0;
+                transition: none;
+            }           
+        </style>
+
     </head>
-    <body>
+    <body class="">
+    <h1>Everything within</h1>
+    <p>The body tags should have the fade in effect</p>
+        <img src="https://cdn.shopify.com/s/files/1/0067/3149/7535/products/hello2_1200x630.jpg?v=1571922504">
 
-
-
-
+    
     </body>
+    <script>
+        //adds the fade-out class to the body when the page loads
+        document.body.classList.add('fade-out');
+        //remove the fade-out class from the body once the page is loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-out');
+        });
+    </script>
 </html>
