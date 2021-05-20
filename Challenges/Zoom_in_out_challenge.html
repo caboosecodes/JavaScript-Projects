@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Zoom in and out challenge</title>
+        <style>
+            @keyframes zoominoutsinglefeatured {
+                0% {
+                    transform: scale(1, 1);
+                }
+                50% {
+                    transform: scale(1.2, 1.2);
+                }
+                100% {
+                    transform: scale(1, 1);
+                }
+            }
+
+            .cardContainer img {
+                animation: zoominoutsinglefeatured 3s forwards;
+            }
+            
+            img {
+                height: 100px;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="cardContainer">
+    <img class="img" src="https://images.pexels.com/photos/1924867/pexels-photo-1924867.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="flowers">
+    </div>
+
+
+    </body>
+</html>
