@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic HTML Template</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+    <div id="JSX"></div>
+
+
+    <script type="text/babel">
+        //React.Compenent is used to specify a class or function
+        //class specifies a class
+        class Greeting extends React.Component {
+            //render() is used to create a function in react
+            render() {
+                //returns information
+                //the text inside the h1 elements is customizable
+                return <h1>Hello, World!</h1>
+            }
+        }
+        //"Greeting" has to be capitalized
+        ReactDOM.render(<Greeting />,  document.getElementById('JSX'))
+    </script>
+
+    </body>
+</html>

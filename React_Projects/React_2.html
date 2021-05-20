@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic HTML Template</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    </head>
+    <body>
+    <div id="like_button_container"></div>
+
+<script>
+    //constructors creates an object wthin a class
+    const X = React.createElement;
+    //class is a keyword that is used as a template for creating objects
+    // extends is a keyword that is used to create a child class of another class (parent)
+    class likeButton extends React.Component {
+        //props is short for properties
+        constructor(props) {
+            //super is a keyword that is used to access and call function on an objects parent; calls a constructor
+            super(props);
+            this.state = { liked: false };
+        }
+
+        render() {
+            if (this.state.liked) {
+                return 'You clicked the like button';
+            }
+
+            return X(
+                'button',
+                //setState schedules a UI update
+                { onClick: () => this.setState({ liked: true }) },
+                'Like'
+            );
+        }
+    }
+
+    const domContainer = document.querySelector('#like_button_container');
+    ReactDOM.render(X(likeButton), domContainer);
+</script>
+
+    </body>
+</html>
