@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic HTML Template</title>
+        <script>
+            function validateForm() {
+                var x = document.forms["formName"]["fname"].value;
+                var y = document.forms["formName"]["lname"].value;
+                var z = document.forms["formName"]["pnumber"].value;
+                if (x == "") {
+                    alert("First Name must be filled out");
+                    return false;
+                }
+                if (y == "") {
+                    alert("Last Name must be filled out");
+                    return false;
+                }
+                if (z == "") {
+                    alert("Phone Number must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="formName" action="" onsubmit="return validateForm()" method="post">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
+            <label for="pnumber">Phone Number</label><br>
+            <input type="text" id="pnumber" name="pnumber" placeholder="Phone Number"><br>
+            <input type="submit" value="Enter">
+        </form>
+
+
+
+
+    </body>
+</html>
