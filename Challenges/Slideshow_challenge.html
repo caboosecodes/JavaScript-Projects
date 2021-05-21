@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>slideshow</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <style>
+            #slideshow {
+                margin: 50px auto;
+                position: relative;
+                width: 240px;
+                height: 240px;
+                padding: 10px;
+                box-shadow: 0 0 20px rbga(0, 0, 0, 0.4);
+            }
+
+            #slideshow > div {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="slideshow">
+        <div>
+            <img src="https://images.pexels.com/photos/850602/pexels-photo-850602.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+
+        <div>
+            <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+
+        <div>
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+        </div>
+
+        <div>
+            Neat!
+        </div>
+    </div>
+
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $("#slideshow > div:first")
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo("#slideshow");
+            }, 3000);
+    </script>
+
+    </body>
+</html>

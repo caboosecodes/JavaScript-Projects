@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>sticky challenge</title>
+        <style>
+            #sticky {
+                position: -webkit-sticky;
+                position: sticky;
+            }
+            .open-button {
+                background-color: #555;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.8;
+                position: fixed;
+                bottom: 23px;
+                right: 28px;
+                width: 280px;
+            }
+
+            .form-popup {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                right: 15px;
+                border: 3px solid #f1f1f1;
+                z-index: 9;
+            }
+
+            .form-container {
+                max-width: 300px;
+                padding: 10px;
+                background-color: white;
+            }
+
+            .form-container input[type=text] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+            
+              .form-container .btn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom:10px;
+                opacity: 0.8;
+              }
+
+              .form-container .cancel {
+                background-color: red;
+              }
+        </style>
+    </head>
+    <body>
+    <h1>Sticky</h1>
+    <div id=sticky>
+        <div>
+        <button class="open-button" id="button" onclick="openForm()">Get in touch</button>
+        </div>
+
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <h3>Contact details</h3>
+                <label for="name">Name</label>
+                <input type="text" name="name">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+
+                <button type="submit" class="btn">Enter</button><br>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+    </body>
+</html>
